@@ -33,7 +33,7 @@ resource "aws_security_group" "Jenkins-sg" {
 resource "aws_instance" "web" {
   ami                    = "ami-0f58b397bc5c1f2e8"  #change your ami value according to your aws instance
   instance_type          = "t2.large"
-  key_name               = "my key"
+  key_name               = "dec-key"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
   user_data              = templatefile("./script.sh", {})
 
