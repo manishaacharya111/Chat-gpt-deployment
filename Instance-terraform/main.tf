@@ -50,7 +50,7 @@ resource "aws_instance" "web2" {
   key_name               = "may"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
   tags = {
-    Name = "Monitering via grafana"
+    Name = "Grafana"
   }
   root_block_device {
     volume_size = 30
