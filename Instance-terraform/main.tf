@@ -31,7 +31,7 @@ resource "aws_security_group" "Jenkins-sg" {
 
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0c7217cdde317cfec"  #change your ami value according to your aws instance
+  ami                    = "ami-0f58b397bc5c1f2e8"  #change your ami value according to your aws instance
   instance_type          = "t2.large"
   key_name               = "my key"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
